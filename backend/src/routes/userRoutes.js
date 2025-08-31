@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const {
+  createNew,
   getMe,
   getUser,
   getUsers,
@@ -20,6 +21,9 @@ const {
 // Middleware
 const { protect, authorize } = require('../middleware/auth');
 const { validateChangePassword, validateForgotPassword } = require('../middleware/validation');
+
+// Create new user (Admin only)
+router.post('/',  createNew);
 
 // Public routes
 router.post('/forgot-password', validateForgotPassword, forgotPassword);
