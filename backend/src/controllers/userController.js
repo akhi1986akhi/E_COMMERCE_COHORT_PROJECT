@@ -4,6 +4,69 @@ const Address = require('../models/Address');
 const crypto = require('crypto');
 const { sendEmail } = require('../utils/email'); // Assume you have an email utility
 
+// @desc    Create a new user (Admin only)
+// @route   POST /api/users
+// @access  Private/Admin
+const createNew = async (req, res) => {
+  try {
+    const {
+      firstName,
+      lastName,
+      email,
+      password,
+      phone,
+      avatar,
+      role,
+      preferences
+    } = req.body;
+
+    // Basic required fields check
+    if (!firstName || !lastName || !email || !password) {
+      return res.status(400).json({
+        success: false,
+        message: 'First name, last name, email, and password are required'
+      });
+    }
+
+    // Check if user already exists
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(409).json({
+        success: false,
+        message: 'User with this email already exists'
+      });
+    }
+
+    const user = await User.create({
+      firstName,
+      lastName,
+      email,
+      password,
+      phone,
+      avatar,
+      role,
+      preferences
+    });
+
+    // Remove password from response
+    user.password = undefined;
+
+    res.status(201).json({
+      success: true,
+      message: 'User created successfully',
+      data: user
+    });
+  } catch (error) {
+    res.status(400).json({
+      success: false,
+      message: 'User creation failed',
+      error: error.message
+    });
+  }
+};
+
+
+
 // @desc    Get current user profile
 // @route   GET /api/users/me
 // @access  Private
@@ -580,6 +643,7 @@ const getUserStats = async (req, res) => {
 };
 
 module.exports = {
+  createNew,
   getMe,
   getUser,
   getUsers,
