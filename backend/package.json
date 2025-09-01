@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./index.js",
     "dev": "nodemon ./indexjs",
-    "test": "node --test ./test/index.test.js"
+    "test": "node --test"
   },
   "author": "Akhilesh Kumar",
   "license": "MIT",

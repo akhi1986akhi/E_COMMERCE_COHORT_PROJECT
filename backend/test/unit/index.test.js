@@ -8,7 +8,7 @@ const mockConnectDB = async () => {
 };
 
 // Override require cache for database
-const databasePath = require.resolve('../src/config/database');
+const databasePath = require.resolve('../../src/config/database');
 require.cache[databasePath] = {
   exports: mockConnectDB,
   loaded: true,
@@ -16,7 +16,7 @@ require.cache[databasePath] = {
 };
 
 // Import app after mocking
-const app = require('../index');
+const app = require('../../index');
 
 describe('Express App Tests', () => {
   it('should export an express app', () => {
