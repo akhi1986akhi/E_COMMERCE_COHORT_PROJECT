@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const {
   createNew,
+  loginUser,
   getMe,
   getUser,
   getUsers,
@@ -22,10 +23,10 @@ const {
 const { protect, authorize } = require('../middleware/auth');
 const { validateChangePassword, validateForgotPassword } = require('../middleware/validation');
 
-// Create new user (Admin only)
-router.post('/',  createNew);
 
 // Public routes
+router.post('/',  createNew);
+router.post('/login',  loginUser);
 router.post('/forgot-password', validateForgotPassword, forgotPassword);
 router.patch('/reset-password/:token', resetPassword);
 router.get('/verify-email/:token', verifyEmail);

@@ -2,7 +2,10 @@
 const User = require('../models/User');
 const Address = require('../models/Address');
 const crypto = require('crypto');
+const bcrypt = require('bcryptjs');
 const { sendEmail } = require('../utils/email'); // Assume you have an email utility
+const jwt = require('jsonwebtoken');
+
 
 // @desc    Create a new user (Admin only)
 // @route   POST /api/users
@@ -67,15 +70,85 @@ const createNew = async (req, res) => {
 
 
 
+// @desc    Login user & set token in cookie
+// @route   POST /api/users/login
+// @access  Public
+const loginUser = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    // Basic validation
+    if (!email || !password) {
+      return res.status(400).json({
+        success: false,
+        message: 'Email and password are required'
+      });
+    }
+
+    // Find user
+    const user = await User.findOne({ email }).select('+password');
+    if (!user) {
+      return res.status(401).json({
+        success: false,
+        message: 'Invalid credentials'
+      });
+    }
+
+    // Compare password
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.status(401).json({
+        success: false,
+        message: 'Invalid credentials'
+      });
+    }
+
+    // Generate JWT
+    const token = jwt.sign(
+      { id: user._id, role: user.role },
+      process.env.JWT_SECRET,
+      { expiresIn: '7d' }
+    );
+
+    // Remove password before sending user object
+    user.password = undefined;
+
+    // Set cookie
+    res.cookie('token', token, {
+      httpOnly: true,         // prevent XSS
+      secure: process.env.NODE_ENV === 'production', // only https in prod
+      sameSite: 'None',
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+      path: '/',
+
+    });
+
+    res.status(200).json({
+      success: true,
+      message: 'Login successful',
+      data: user,
+      token // optional: in case you also want to send token in body
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: 'Login failed',
+      error: error.message
+    });
+  }
+};
+
+
 // @desc    Get current user profile
 // @route   GET /api/users/me
 // @access  Private
 const getMe = async (req, res) => {
+  console.log("Get API");
   try {
     const user = await User.findById(req.user.id)
-      .populate('addresses')
-      .populate('wishlist')
-      .select('-password');
+      // .populate('addresses')
+      // .populate('wishlist')
+      // .select('-password');
 
     if (!user) {
       return res.status(404).json({
@@ -644,6 +717,7 @@ const getUserStats = async (req, res) => {
 
 module.exports = {
   createNew,
+  loginUser,
   getMe,
   getUser,
   getUsers,
