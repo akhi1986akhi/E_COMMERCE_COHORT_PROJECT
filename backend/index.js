@@ -11,6 +11,8 @@ const rateLimit = require('express-rate-limit');
 // Route imports
 const userRoutes = require('./src/routes/userRoutes');
 const addresses = require('./src/routes/addressesRoutes');
+const wishlist = require('./src/routes/wishlistRoutes');
+const products = require ('./src/routes/productsRoutes')
 
 // Security middleware
 // app.use(helmet());
@@ -31,6 +33,8 @@ connectDB();
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/addresses', addresses);
+app.use('/api/wishlist', wishlist);
+app.use('/api/products', products);
 app.get("/",(req,res)=>{
     res.status(200).json({msg:'running successfully', status:true});
 })
