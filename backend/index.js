@@ -10,7 +10,7 @@ const rateLimit = require('express-rate-limit');
 
 // Route imports
 const userRoutes = require('./src/routes/userRoutes');
-
+const addresses = require('./src/routes/addressesRoutes');
 
 // Security middleware
 // app.use(helmet());
@@ -30,7 +30,7 @@ connectDB();
 
 // Routes
 app.use('/api/users', userRoutes);
-
+app.use('/api/addresses', addresses);
 app.get("/",(req,res)=>{
     res.status(200).json({msg:'running successfully', status:true});
 })

@@ -143,10 +143,9 @@ const loginUser = async (req, res) => {
 // @route   GET /api/users/me
 // @access  Private
 const getMe = async (req, res) => {
-  console.log("Get API");
   try {
     const user = await User.findById(req.user.id)
-      // .populate('addresses')
+      .populate('addresses')
       // .populate('wishlist')
       // .select('-password');
 

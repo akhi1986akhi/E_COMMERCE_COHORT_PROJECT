@@ -9,9 +9,6 @@ const protect = async (req, res, next) => {
     
     let token;
 
-     // 1. Get token from cookies or Authorization header
-
-
         // 1. Get token from cookies or Authorization header
         if (req.cookies?.token) {
             token = req.cookies?.token;
