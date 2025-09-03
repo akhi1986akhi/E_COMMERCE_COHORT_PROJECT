@@ -4,11 +4,13 @@
 
 /frontend/crm/tmp
 /frontend/crm/out-tsc
+/frontend/crm/.vscode
 /frontend/crm/bazel-out
 /frontend/crm/dist
 /frontend/ecom/dist
 /frontend/ecom/.next
 
+/frontend/ecom/.vscode
 
 # Logs
 logs
