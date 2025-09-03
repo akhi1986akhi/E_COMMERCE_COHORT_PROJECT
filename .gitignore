@@ -1,7 +1,11 @@
 /backend/node_modules
 /frontend/ecom/node_modules
 /frontend/crm/node_modules
-/frontend/ecom/dist
+
+/frontend/crm/tmp
+/frontend/crm/out-tsc
+/frontend/crm/bazel-out
+/frontend/crm/dist
 /frontend/ecom/dist
 /frontend/ecom/.next
 
