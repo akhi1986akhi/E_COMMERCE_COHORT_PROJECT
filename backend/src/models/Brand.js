@@ -55,7 +55,7 @@ brandSchema.pre('save', function(next) {
 });
 
 // Indexes
-brandSchema.index({ slug: 1 });
+// brandSchema.index({ slug: 1 });
 brandSchema.index({ isActive: 1 });
 
 module.exports = mongoose.model('Brand', brandSchema);

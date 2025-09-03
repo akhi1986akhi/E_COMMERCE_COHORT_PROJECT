@@ -230,8 +230,8 @@ productSchema.pre('save', async function(next) {
 });
 
 // Indexes
-productSchema.index({ slug: 1 });
-productSchema.index({ sku: 1 });
+// productSchema.index({ slug: 1 });
+// productSchema.index({ sku: 1 });
 productSchema.index({ categories: 1 });
 productSchema.index({ price: 1 });
 productSchema.index({ rating: -1 });

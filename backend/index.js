@@ -12,7 +12,9 @@ const rateLimit = require('express-rate-limit');
 const userRoutes = require('./src/routes/userRoutes');
 const addresses = require('./src/routes/addressesRoutes');
 const wishlist = require('./src/routes/wishlistRoutes');
-const products = require ('./src/routes/productsRoutes')
+const products = require ('./src/routes/productsRoutes');
+const category = require('./src/routes/categoryRoutes');
+const brand = require('./src/routes/brandRoutes');
 
 // Security middleware
 // app.use(helmet());
@@ -35,6 +37,8 @@ app.use('/api/users', userRoutes);
 app.use('/api/addresses', addresses);
 app.use('/api/wishlist', wishlist);
 app.use('/api/products', products);
+app.use('/api/category', category);
+app.use('/api/brand', brand);
 app.get("/",(req,res)=>{
     res.status(200).json({msg:'running successfully', status:true});
 })

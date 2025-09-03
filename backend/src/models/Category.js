@@ -25,7 +25,15 @@ const categorySchema = new mongoose.Schema({
   parent: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Category',
-    default: null
+    default: null,
+    validate: {
+      validator: async function(value) {
+        if (!value) return true; // null is allowed
+        const category = await mongoose.model('Category').findById(value);
+        return category !== null;
+      },
+      message: 'Parent category does not exist'
+    }
   },
   ancestors: [{
     type: mongoose.Schema.Types.ObjectId,
@@ -68,28 +76,35 @@ categorySchema.virtual('productsCount', {
 
 // Pre-save middleware to generate slug and set ancestors
 categorySchema.pre('save', async function(next) {
-  if (this.isModified('name')) {
-    this.slug = this.name
-      .toLowerCase()
-      .replace(/[^a-z0-9 -]/g, '')
-      .replace(/\s+/g, '-')
-      .replace(/-+/g, '-');
-  }
-
-  if (this.isModified('parent')) {
-    if (this.parent) {
-      const parentCategory = await this.constructor.findById(this.parent);
-      this.ancestors = [...parentCategory.ancestors, this.parent];
-    } else {
-      this.ancestors = [];
+  try {
+    if (this.isModified('name')) {
+      this.slug = this.name
+        .toLowerCase()
+        .replace(/[^a-z0-9 -]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-');
     }
+
+    if (this.isModified('parent')) {
+      if (this.parent) {
+        const parentCategory = await this.constructor.findById(this.parent);
+        if (!parentCategory) {
+          throw new Error('Parent category not found');
+        }
+        this.ancestors = [...parentCategory.ancestors, this.parent];
+      } else {
+        this.ancestors = [];
+      }
+    }
+    
+    next();
+  } catch (error) {
+    next(error);
   }
-  
-  next();
 });
 
 // Indexes
-categorySchema.index({ slug: 1 });
+// categorySchema.index({ slug: 1 });
 categorySchema.index({ parent: 1 });
 categorySchema.index({ isActive: 1 });
 

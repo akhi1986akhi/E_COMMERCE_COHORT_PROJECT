@@ -34,8 +34,8 @@ const wishlistSchema = new mongoose.Schema({
 });
 
 // Indexes
-wishlistSchema.index({ user: 1 });
-wishlistSchema.index({ shareToken: 1 });
+// wishlistSchema.index({ user: 1 });
+// wishlistSchema.index({ shareToken: 1 });
 wishlistSchema.index({ 'items.addedAt': -1 });
 
 // Pre-save middleware to generate share token
