@@ -1,8 +1,13 @@
 /backend/node_modules
 /frontend/ecom/node_modules
+/frontend/crm/node_modules
 
 /frontend/ecom/dist
 /frontend/ecom/.next
+/frontend/crm/dist
+/frontend/crm/tmp
+/frontend/crm/out-tsc
+/frontend/crm/bazel-out
 
 
 # Logs
