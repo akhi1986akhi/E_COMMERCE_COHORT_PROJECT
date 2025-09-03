@@ -4,10 +4,7 @@
 
 /frontend/ecom/dist
 /frontend/ecom/.next
-/frontend/crm/dist
-/frontend/crm/tmp
-/frontend/crm//out-tsc
-/frontend/crm/bazel-out
+
 
 # Logs
 logs
