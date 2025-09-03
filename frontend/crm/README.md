@@ -25,3 +25,49 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+src/
+├── app/
+│   ├── components/
+│   │   ├── login/
+│   │   │   ├── login.component.ts
+│   │   │   ├── login.component.html
+│   │   │   ├── login.component.scss
+│   │   │   └── login.component.spec.ts
+│   │   ├── dashboard/
+│   │   │   ├── dashboard.component.ts
+│   │   │   ├── dashboard.component.html
+│   │   │   ├── dashboard.component.scss
+│   │   │   └── dashboard.component.spec.ts
+│   │   └── layout/
+│   │       ├── header/
+│   │       │   ├── header.component.ts
+│   │       │   ├── header.component.html
+│   │       │   ├── header.component.scss
+│   │       │   └── header.component.spec.ts
+│   │       └── sidebar/
+│   │           ├── sidebar.component.ts
+│   │           ├── sidebar.component.html
+│   │           ├── sidebar.component.scss
+│   │           └── sidebar.component.spec.ts
+│   ├── services/
+│   │   ├── auth.service.ts
+│   │   ├── auth.service.spec.ts
+│   │   └── auth.guard.ts
+│   ├── interfaces/
+│   │   └── user.interface.ts
+│   ├── utils/
+│   │   └── constants.ts
+│   ├── app-routing.module.ts
+│   ├── app.component.ts
+│   ├── app.component.html
+│   ├── app.component.scss
+│   ├── app.component.spec.ts
+│   └── app.module.ts
+├── assets/
+│   └── images/
+├── environments/
+│   ├── environment.ts
+│   └── environment.prod.ts
+└── styles/
+    └── styles.scss
