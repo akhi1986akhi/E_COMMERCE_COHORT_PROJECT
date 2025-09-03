@@ -1,7 +1,7 @@
 /backend/node_modules
 /frontend/ecom/node_modules
 /frontend/crm/node_modules
-
+/frontend/ecom/dist
 /frontend/ecom/dist
 /frontend/ecom/.next
 
