@@ -1,0 +1,1291 @@
+    <!-- Dashboard Content -->
+        <main class="p-8">
+            <!-- Stats Overview -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <!-- Total Orders Card -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="p-3 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-xl shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <span
+                                    class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide">Today</span>
+                                <span class="text-sm font-bold text-indigo-600 dark:text-indigo-400">+52</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Total Orders</h4>
+                            <div class="flex items-baseline">
+                                <h3 class="text-3xl font-bold text-gray-900 dark:text-gray-100">1,248</h3>
+                                <span class="ml-2 text-sm text-gray-500 dark:text-gray-400">orders</span>
+                            </div>
+                        </div>
+
+                        <!-- Mini Chart -->
+                        <div class="h-12 flex items-end space-x-1 mb-3">
+                            <div class="flex-1 bg-indigo-200 dark:bg-indigo-800 rounded-t h-6"></div>
+                            <div class="flex-1 bg-indigo-200 dark:bg-indigo-800 rounded-t h-8"></div>
+                            <div class="flex-1 bg-indigo-200 dark:bg-indigo-800 rounded-t h-4"></div>
+                            <div class="flex-1 bg-indigo-200 dark:bg-indigo-800 rounded-t h-10"></div>
+                            <div class="flex-1 bg-indigo-200 dark:bg-indigo-800 rounded-t h-7"></div>
+                            <div class="flex-1 bg-indigo-300 dark:bg-indigo-700 rounded-t h-12"></div>
+                            <div class="flex-1 bg-indigo-400 dark:bg-indigo-600 rounded-t h-10"></div>
+                        </div>
+
+                        <div
+                            class="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-700">
+                            <div class="flex items-center">
+                                <div class="flex items-center px-2.5 py-1 bg-green-100 dark:bg-green-900 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 text-green-600 dark:text-green-400" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    <span
+                                        class="ml-1 text-xs font-medium text-green-600 dark:text-green-400">12.5%</span>
+                                </div>
+                                <span class="ml-2 text-xs text-gray-500 dark:text-gray-400">vs last week</span>
+                            </div>
+                            <button
+                                class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Revenue Card -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="p-3 bg-gradient-to-br from-green-400 to-green-600 rounded-xl shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <span
+                                    class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide">Today</span>
+                                <span class="text-sm font-bold text-green-600 dark:text-green-400">+$1,248</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Revenue</h4>
+                            <div class="flex items-baseline">
+                                <h3 class="text-3xl font-bold text-gray-900 dark:text-gray-100">$24,895</h3>
+                                <span class="ml-2 text-sm text-gray-500 dark:text-gray-400">USD</span>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="mb-3">
+                            <div class="flex justify-between text-xs text-gray-600 dark:text-gray-400 mb-1">
+                                <span>Goal Progress</span>
+                                <span>83%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full"
+                                    style="width: 83%"></div>
+                            </div>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">$5,105 to goal</p>
+                        </div>
+
+                        <div
+                            class="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-700">
+                            <div class="flex items-center">
+                                <div class="flex items-center px-2.5 py-1 bg-green-100 dark:bg-green-900 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 text-green-600 dark:text-green-400" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    <span
+                                        class="ml-1 text-xs font-medium text-green-600 dark:text-green-400">8.2%</span>
+                                </div>
+                                <span class="ml-2 text-xs text-gray-500 dark:text-gray-400">vs last week</span>
+                            </div>
+                            <button
+                                class="text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customers Card -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="p-3 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <span
+                                    class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide">New</span>
+                                <span class="text-sm font-bold text-blue-600 dark:text-blue-400">+28</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Total Customers</h4>
+                            <div class="flex items-baseline">
+                                <h3 class="text-3xl font-bold text-gray-900 dark:text-gray-100">1,895</h3>
+                                <span class="ml-2 text-sm text-gray-500 dark:text-gray-400">users</span>
+                            </div>
+                        </div>
+
+                        <!-- Customer Avatars -->
+                        <div class="flex items-center mb-3">
+                            <div class="flex -space-x-2">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-white dark:border-gray-800">
+                                </div>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 border-2 border-white dark:border-gray-800">
+                                </div>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 border-2 border-white dark:border-gray-800">
+                                </div>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-2 border-white dark:border-gray-800">
+                                </div>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-600 border-2 border-white dark:border-gray-800 flex items-center justify-center">
+                                    <span class="text-xs font-medium text-gray-600 dark:text-gray-300">+24</span>
+                                </div>
+                            </div>
+                            <span class="ml-3 text-xs text-gray-500 dark:text-gray-400">Recent signups</span>
+                        </div>
+
+                        <div
+                            class="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-700">
+                            <div class="flex items-center">
+                                <div class="flex items-center px-2.5 py-1 bg-green-100 dark:bg-green-900 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 text-green-600 dark:text-green-400" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    <span
+                                        class="ml-1 text-xs font-medium text-green-600 dark:text-green-400">5.7%</span>
+                                </div>
+                                <span class="ml-2 text-xs text-gray-500 dark:text-gray-400">vs last week</span>
+                            </div>
+                            <button
+                                class="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conversion Rate Card -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="p-3 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <span
+                                    class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide">Target</span>
+                                <span class="text-sm font-bold text-yellow-600 dark:text-yellow-400">5.0%</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <h4 class="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Conversion Rate</h4>
+                            <div class="flex items-baseline">
+                                <h3 class="text-3xl font-bold text-gray-900 dark:text-gray-100">4.73%</h3>
+                                <span class="ml-2 text-sm text-gray-500 dark:text-gray-400">rate</span>
+                            </div>
+                        </div>
+
+                        <!-- Circular Progress -->
+                        <div class="flex items-center justify-center mb-3">
+                            <div class="relative">
+                                <svg class="w-20 h-20 transform -rotate-90">
+                                    <circle cx="40" cy="40" r="36" stroke="#e5e7eb" stroke-width="8" fill="none"
+                                        class="dark:stroke-gray-700" />
+                                    <circle cx="40" cy="40" r="36" stroke="url(#gradient)" stroke-width="8" fill="none"
+                                        stroke-dasharray="226" stroke-dashoffset="24" stroke-linecap="round" />
+                                    <defs>
+                                        <linearGradient id="gradient">
+                                            <stop offset="0%" stop-color="#fbbf24" />
+                                            <stop offset="100%" stop-color="#f97316" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <span class="text-lg font-bold text-gray-900 dark:text-gray-100">94.6%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-700">
+                            <div class="flex items-center">
+                                <div class="flex items-center px-2.5 py-1 bg-red-100 dark:bg-red-900 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 text-red-600 dark:text-red-400" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M12 13a1 1 0 100 2h5a1 1 0 001-1V9a1 1 0 10-2 0v2.586l-4.293-4.293a1 1 0 00-1.414 0L8 9.586 3.707 5.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0L11 9.414 14.586 13H12z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="ml-1 text-xs font-medium text-red-600 dark:text-red-400">1.2%</span>
+                                </div>
+                                <span class="ml-2 text-xs text-gray-500 dark:text-gray-400">vs last week</span>
+                            </div>
+                            <button
+                                class="text-yellow-600 dark:text-yellow-400 hover:text-yellow-700 dark:hover:text-yellow-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts & Main Content -->
+         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+    <!-- Revenue Chart - Enhanced with better card design and more professional chart -->
+    <div class="lg:col-span-2 bg-white dark:bg-gray-800 rounded-3xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100 dark:border-gray-700">
+        <div class="p-6">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        Revenue Overview
+                    </h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm ml-12">Monitor your revenue performance</p>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center space-x-2">
+                        <span class="inline-block w-3 h-3 rounded-full bg-indigo-500"></span>
+                        <span class="text-xs text-gray-600 dark:text-gray-400">Current</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="inline-block w-3 h-3 rounded-full bg-indigo-200 dark:bg-indigo-800"></span>
+                        <span class="text-xs text-gray-600 dark:text-gray-400">Previous</span>
+                    </div>
+                    <div class="relative">
+                        <select class="appearance-none bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg pl-4 pr-10 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent cursor-pointer">
+                            <option>Last 7 Days</option>
+                            <option>Last 30 Days</option>
+                            <option>Last 90 Days</option>
+                            <option>This Year</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 dark:text-gray-300">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Revenue stats summary -->
+            <div class="grid grid-cols-3 gap-4 mb-6">
+                <div class="bg-gray-50 dark:bg-gray-900/50 rounded-xl p-4">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Total Revenue</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white">$84,254</h4>
+                    <span class="text-xs text-green-600 dark:text-green-400 flex items-center mt-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                        </svg>
+                        +12.5%
+                    </span>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-900/50 rounded-xl p-4">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Average Order</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white">$142.35</h4>
+                    <span class="text-xs text-green-600 dark:text-green-400 flex items-center mt-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                        </svg>
+                        +4.2%
+                    </span>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-900/50 rounded-xl p-4">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Orders Count</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white">592</h4>
+                    <span class="text-xs text-red-600 dark:text-red-400 flex items-center mt-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 13a1 1 0 100 2h5a1 1 0 001-1V9a1 1 0 10-2 0v2.586l-4.293-4.293a1 1 0 00-1.414 0L8 9.586 3.707 5.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0L11 9.414 14.586 13H12z" clip-rule="evenodd" />
+                        </svg>
+                        -2.3%
+                    </span>
+                </div>
+            </div>
+
+            <!-- Chart with enhanced visualization -->
+            <div class="h-64 relative mt-8">
+                <!-- Chart background grid -->
+                <div class="absolute inset-0 grid grid-cols-7 gap-px">
+                    <div class="border-r border-gray-100 dark:border-gray-800 h-full"></div>
+                    <div class="border-r border-gray-100 dark:border-gray-800 h-full"></div>
+                    <div class="border-r border-gray-100 dark:border-gray-800 h-full"></div>
+                    <div class="border-r border-gray-100 dark:border-gray-800 h-full"></div>
+                    <div class="border-r border-gray-100 dark:border-gray-800 h-full"></div>
+                    <div class="border-r border-gray-100 dark:border-gray-800 h-full"></div>
+                    <div class="h-full"></div>
+                </div>
+                
+                <!-- Horizontal grid lines -->
+                <div class="absolute inset-0 flex flex-col">
+                    <div class="flex-1 border-b border-gray-100 dark:border-gray-800"></div>
+                    <div class="flex-1 border-b border-gray-100 dark:border-gray-800"></div>
+                    <div class="flex-1 border-b border-gray-100 dark:border-gray-800"></div>
+                    <div class="flex-1 border-b border-gray-100 dark:border-gray-800"></div>
+                    <div class="flex-1"></div>
+                </div>
+                
+                <!-- Chart bars - Previous period -->
+                <div class="absolute bottom-0 left-0 right-0 flex h-full items-end space-x-2 px-2">
+                    <div class="w-full">
+                        <div class="mx-auto w-8 h-40 bg-indigo-200 dark:bg-indigo-800/60 rounded-t-lg"></div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto w-8 h-32 bg-indigo-200 dark:bg-indigo-800/60 rounded-t-lg"></div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto w-8 h-48 bg-indigo-200 dark:bg-indigo-800/60 rounded-t-lg"></div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto w-8 h-24 bg-indigo-200 dark:bg-indigo-800/60 rounded-t-lg"></div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto w-8 h-36 bg-indigo-200 dark:bg-indigo-800/60 rounded-t-lg"></div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto w-8 h-44 bg-indigo-200 dark:bg-indigo-800/60 rounded-t-lg"></div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto w-8 h-28 bg-indigo-200 dark:bg-indigo-800/60 rounded-t-lg"></div>
+                    </div>
+                </div>
+                
+                <!-- Chart bars - Current period -->
+                <div class="absolute bottom-0 left-0 right-0 flex h-full items-end space-x-2 px-2 z-10">
+                    <div class="w-full">
+                        <div class="mx-auto w-8 h-46 bg-indigo-500 dark:bg-indigo-500 rounded-t-lg"></div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto w-8 h-38 bg-indigo-500 dark:bg-indigo-500 rounded-t-lg"></div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto w-8 h-56 bg-indigo-500 dark:bg-indigo-500 rounded-t-lg"></div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto w-8 h-28 bg-indigo-500 dark:bg-indigo-500 rounded-t-lg"></div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto w-8 h-42 bg-indigo-500 dark:bg-indigo-500 rounded-t-lg"></div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto w-8 h-52 bg-indigo-500 dark:bg-indigo-500 rounded-t-lg"></div>
+                    </div>
+                    <div class="w-full">
+                        <div class="mx-auto w-8 h-34 bg-indigo-500 dark:bg-indigo-500 rounded-t-lg"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chart labels -->
+            <div class="flex justify-between mt-2 px-2 text-xs text-gray-500 dark:text-gray-400">
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
+                <span>Sun</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Activity - Enhanced with better visual hierarchy and interactive elements -->
+    <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100 dark:border-gray-700">
+        <!-- Header with gradient overlay effect -->
+        <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 dark:from-indigo-900/20 dark:to-purple-900/20"></div>
+            <div class="px-6 py-5 border-b border-gray-100 dark:border-gray-700 relative">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center mr-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                        </div>
+                        Recent Activity
+                    </h3>
+                    <button class="p-2 rounded-full hover:bg-white/20 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                        </svg>
+                    </button>
+                </div>
+                <p class="text-gray-500 dark:text-gray-400 text-sm ml-12">Latest updates from your store</p>
+            </div>
+        </div>
+
+        <!-- Activity Items with enhanced design -->
+        <div class="max-h-[500px] overflow-y-auto custom-scrollbar">
+            <!-- Activity Item 1 - New Order -->
+            <div class="group relative">
+                <div class="absolute top-0 left-6 bottom-0 w-0.5 bg-gray-100 dark:bg-gray-700 group-last:hidden"></div>
+                <div class="px-6 py-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                    <div class="flex items-center space-x-4">
+                        <div class="relative">
+                            <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/50 flex items-center justify-center shadow-sm z-10 relative border-4 border-white dark:border-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600 dark:text-green-400" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm font-medium text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                New order #3245
+                            </p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">
+                                $1,230.00 • 2 minutes ago
+                            </p>
+                        </div>
+                        <div>
+                            <span class="text-xs font-medium px-2.5 py-0.5 bg-green-50 dark:bg-green-900/50 text-green-600 dark:text-green-400 rounded-full">
+                                New
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Item 2 - New Customer -->
+            <div class="group relative">
+                <div class="absolute top-0 left-6 bottom-0 w-0.5 bg-gray-100 dark:bg-gray-700 group-last:hidden"></div>
+                <div class="px-6 py-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                    <div class="flex items-center space-x-4">
+                        <div class="relative">
+                            <div class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center shadow-sm z-10 relative border-4 border-white dark:border-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 dark:text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm font-medium text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                New customer registered
+                            </p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">
+                                James Wilson • 1 hour ago
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Item 3 - Payment Received -->
+            <div class="group relative">
+                <div class="absolute top-0 left-6 bottom-0 w-0.5 bg-gray-100 dark:bg-gray-700 group-last:hidden"></div>
+                <div class="px-6 py-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                    <div class="flex items-center space-x-4">
+                        <div class="relative">
+                            <div class="w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center shadow-sm z-10 relative border-4 border-white dark:border-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600 dark:text-indigo-400" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
+                                    <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm font-medium text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                Payment received
+                            </p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">
+                                $2,546.00 • 3 hours ago
+                            </p>
+                        </div>
+                        <div>
+                            <span class="text-xs font-medium px-2.5 py-0.5 bg-indigo-50 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 rounded-full">
+                                Payment
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Item 4 - Product Update -->
+            <div class="group relative">
+                <div class="absolute top-0 left-6 bottom-0 w-0.5 bg-gray-100 dark:bg-gray-700 group-last:hidden"></div>
+                <div class="px-6 py-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                    <div class="flex items-center space-x-4">
+                        <div class="relative">
+                            <div class="w-12 h-12 rounded-full bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center shadow-sm z-10 relative border-4 border-white dark:border-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-600 dark:text-amber-400" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm font-medium text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                Product inventory updated
+                            </p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">
+                                Laptop Pro X1 • 5 hours ago
+                            </p>
+                        </div>
+                        <div>
+                            <span class="text-xs font-medium px-2.5 py-0.5 bg-amber-50 dark:bg-amber-900/50 text-amber-600 dark:text-amber-400 rounded-full">
+                                Product
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Item 5 - System Update -->
+            <div class="group relative">
+                <div class="px-6 py-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
+                    <div class="flex items-center space-x-4">
+                        <div class="relative">
+                            <div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center shadow-sm z-10 relative border-4 border-white dark:border-gray-800">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-600 dark:text-purple-400" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm font-medium text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                System maintenance completed
+                            </p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">
+                                System • 8 hours ago
+                            </p>
+                        </div>
+                        <div>
+                            <span class="text-xs font-medium px-2.5 py-0.5 bg-purple-50 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 rounded-full">
+                                System
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View all button -->
+        <div class="px-6 py-3 bg-gray-50 dark:bg-gray-900/30 border-t border-gray-100 dark:border-gray-700">
+            <button class="w-full py-2 bg-white dark:bg-gray-800 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 font-medium rounded-lg text-sm transition-colors border border-gray-200 dark:border-gray-700 hover:border-indigo-200 dark:hover:border-indigo-800">
+                View all activity
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 163, 175, 0.3);
+    border-radius: 20px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(156, 163, 175, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: rgba(75, 85, 99, 0.5);
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(75, 85, 99, 0.7);
+    }
+}
+</style>
+
+            <!-- Recent Orders & Top Products -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Recent Orders -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                    <!-- Header -->
+                    <div
+                        class="px-6 py-5 border-b border-gray-100 dark:border-gray-700 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-750">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-indigo-500" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                </svg>
+                                Recent Orders
+                            </h3>
+                            <span
+                                class="text-xs px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 rounded-full font-semibold">
+                                5 New
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Table Content -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-gray-50 dark:bg-gray-750 border-b border-gray-100 dark:border-gray-700">
+                                <tr>
+                                    <th
+                                        class="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
+                                        Order ID
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
+                                        Customer
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
+                                        Date
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
+                                        Amount
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
+                                        Status
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+                                <!-- Order Row 1 -->
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors group">
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="font-mono text-sm font-semibold text-indigo-600 dark:text-indigo-400">
+                                            #3245
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <div
+                                                class="h-8 w-8 rounded-full bg-gradient-to-r from-violet-500 to-purple-500 flex items-center justify-center text-white text-xs font-bold">
+                                                JD
+                                            </div>
+                                            <div class="ml-3">
+                                                <p class="text-sm font-medium text-gray-900 dark:text-gray-200">John Doe
+                                                </p>
+                                                <p class="text-xs text-gray-500 dark:text-gray-400">john@example.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm text-gray-900 dark:text-gray-200">Oct 10, 2023</div>
+                                        <div class="text-xs text-gray-500 dark:text-gray-400">2:30 PM</div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span class="text-sm font-bold text-gray-900 dark:text-gray-200">$125.00</span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300">
+                                            <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fillRule="evenodd"
+                                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                    clipRule="evenodd" />
+                                            </svg>
+                                            Delivered
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button
+                                            class="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                                    d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <!-- Order Row 2 -->
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors group">
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="font-mono text-sm font-semibold text-indigo-600 dark:text-indigo-400">
+                                            #3244
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <div
+                                                class="h-8 w-8 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center text-white text-xs font-bold">
+                                                JS
+                                            </div>
+                                            <div class="ml-3">
+                                                <p class="text-sm font-medium text-gray-900 dark:text-gray-200">Jane
+                                                    Smith</p>
+                                                <p class="text-xs text-gray-500 dark:text-gray-400">jane@example.com</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm text-gray-900 dark:text-gray-200">Oct 10, 2023</div>
+                                        <div class="text-xs text-gray-500 dark:text-gray-400">11:45 AM</div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span class="text-sm font-bold text-gray-900 dark:text-gray-200">$245.50</span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300">
+                                            <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                                                <path
+                                                    d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z" />
+                                            </svg>
+                                            Shipped
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button
+                                            class="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                                    d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <!-- Order Row 3 -->
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors group">
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="font-mono text-sm font-semibold text-indigo-600 dark:text-indigo-400">
+                                            #3243
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <div
+                                                class="h-8 w-8 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 flex items-center justify-center text-white text-xs font-bold">
+                                                RJ
+                                            </div>
+                                            <div class="ml-3">
+                                                <p class="text-sm font-medium text-gray-900 dark:text-gray-200">Robert
+                                                    Johnson</p>
+                                                <p class="text-xs text-gray-500 dark:text-gray-400">robert@example.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm text-gray-900 dark:text-gray-200">Oct 9, 2023</div>
+                                        <div class="text-xs text-gray-500 dark:text-gray-400">6:20 PM</div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span class="text-sm font-bold text-gray-900 dark:text-gray-200">$89.99</span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span
+                                            class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300">
+                                            <svg class="w-3 h-3 mr-1 animate-spin" fill="none" viewBox="0 0 24 24">
+                                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                                    strokeWidth="4"></circle>
+                                                <path class="opacity-75" fill="currentColor"
+                                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                                                </path>
+                                            </svg>
+                                            Processing
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <button
+                                            class="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                                    d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Footer -->
+                    <div
+                        class="px-6 py-4 bg-gray-50 dark:bg-gray-750 border-t border-gray-100 dark:border-gray-700 flex items-center justify-between">
+                        <p class="text-sm text-gray-600 dark:text-gray-400">
+                            Showing <span class="font-semibold">1-5</span> of <span class="font-semibold">245</span>
+                            orders
+                        </p>
+                        <button
+                            class="inline-flex items-center px-4 py-2 text-sm font-medium text-indigo-600 dark:text-indigo-400 bg-white dark:bg-gray-800 border border-indigo-200 dark:border-indigo-800 rounded-lg hover:bg-indigo-50 dark:hover:bg-gray-700 transition-colors">
+                            View All Orders
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Top Products -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                    <!-- Header -->
+                    <div
+                        class="px-6 py-5 border-b border-gray-100 dark:border-gray-700 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-750">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-purple-500" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                                </svg>
+                                Top Selling Products
+                            </h3>
+                            <div class="flex items-center space-x-2">
+                                <span
+                                    class="text-xs px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 rounded-full font-semibold">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 inline mr-1" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                    </svg>
+                                    Trending
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Table Content -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-gray-50 dark:bg-gray-750 border-b border-gray-100 dark:border-gray-700">
+                                <tr>
+                                    <th
+                                        class="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
+                                        Product
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
+                                        Price
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
+                                        Sold
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
+                                        Revenue
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
+                                        Stock
+                                    </th>
+                                    <th
+                                        class="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
+                                        Trend
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+                                <!-- Product Row 1 -->
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors group">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <div class="relative">
+                                                <img class="h-12 w-12 rounded-lg object-cover shadow-sm"
+                                                    src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                                                    alt="Premium Headphones">
+                                                <span
+                                                    class="absolute -top-1 -right-1 h-5 w-5 bg-yellow-400 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                                                    1
+                                                </span>
+                                            </div>
+                                            <div class="ml-4">
+                                                <div
+                                                    class="text-sm font-semibold text-gray-900 dark:text-gray-200 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                                                    Premium Headphones
+                                                </div>
+                                                <div class="text-xs text-gray-500 dark:text-gray-400">
+                                                    SKU: HP-2024-001
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm font-bold text-gray-900 dark:text-gray-200">$199.99</div>
+                                        <div class="text-xs text-gray-500 dark:text-gray-400 line-through">$249.99</div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <span
+                                                class="text-sm font-semibold text-gray-900 dark:text-gray-200">245</span>
+                                            <span class="ml-2 text-xs text-green-600 dark:text-green-400">+12%</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm font-bold text-green-600 dark:text-green-400">$48,997</div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300">
+                                                <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd"
+                                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                        clipRule="evenodd" />
+                                                </svg>
+                                                In Stock
+                                            </span>
+                                            <span class="ml-2 text-xs text-gray-500 dark:text-gray-400">(156)</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="h-8 w-16">
+                                            <svg class="w-full h-full" viewBox="0 0 60 20">
+                                                <polyline fill="none" stroke="#10b981" strokeWidth="2"
+                                                    points="0,15 10,10 20,12 30,8 40,10 50,5 60,8" />
+                                            </svg>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Product Row 2 -->
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors group">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <div class="relative">
+                                                <img class="h-12 w-12 rounded-lg object-cover shadow-sm"
+                                                    src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg"
+                                                    alt="Smart Watch">
+                                                <span
+                                                    class="absolute -top-1 -right-1 h-5 w-5 bg-gray-400 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                                                    2
+                                                </span>
+                                            </div>
+                                            <div class="ml-4">
+                                                <div
+                                                    class="text-sm font-semibold text-gray-900 dark:text-gray-200 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                                                    Smart Watch
+                                                </div>
+                                                <div class="text-xs text-gray-500 dark:text-gray-400">
+                                                    SKU: SW-2024-002
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm font-bold text-gray-900 dark:text-gray-200">$249.99</div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <span
+                                                class="text-sm font-semibold text-gray-900 dark:text-gray-200">189</span>
+                                            <span class="ml-2 text-xs text-green-600 dark:text-green-400">+8%</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm font-bold text-green-600 dark:text-green-400">$47,248</div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300">
+                                                <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd"
+                                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                        clipRule="evenodd" />
+                                                </svg>
+                                                In Stock
+                                            </span>
+                                            <span class="ml-2 text-xs text-gray-500 dark:text-gray-400">(89)</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="h-8 w-16">
+                                            <svg class="w-full h-full" viewBox="0 0 60 20">
+                                                <polyline fill="none" stroke="#10b981" strokeWidth="2"
+                                                    points="0,12 10,10 20,8 30,10 40,6 50,8 60,5" />
+                                            </svg>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Product Row 3 -->
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors group">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <div class="relative">
+                                                <img class="h-12 w-12 rounded-lg object-cover shadow-sm"
+                                                    src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg"
+                                                    alt="Wireless Earbuds">
+                                                <span
+                                                    class="absolute -top-1 -right-1 h-5 w-5 bg-orange-400 rounded-full flex items-center justify-center text-xs font-bold text-white">
+                                                    3
+                                                </span>
+                                            </div>
+                                            <div class="ml-4">
+                                                <div
+                                                    class="text-sm font-semibold text-gray-900 dark:text-gray-200 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                                                    Wireless Earbuds
+                                                </div>
+                                                <div class="text-xs text-gray-500 dark:text-gray-400">
+                                                    SKU: WE-2024-003
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm font-bold text-gray-900 dark:text-gray-200">$129.99</div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <span
+                                                class="text-sm font-semibold text-gray-900 dark:text-gray-200">176</span>
+                                            <span class="ml-2 text-xs text-red-600 dark:text-red-400">-3%</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm font-bold text-green-600 dark:text-green-400">$22,878</div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300">
+                                                <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd"
+                                                        d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                                                        clipRule="evenodd" />
+                                                </svg>
+                                                Low Stock
+                                            </span>
+                                            <span class="ml-2 text-xs text-gray-500 dark:text-gray-400">(12)</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="h-8 w-16">
+                                            <svg class="w-full h-full" viewBox="0 0 60 20">
+                                                <polyline fill="none" stroke="#f59e0b" strokeWidth="2"
+                                                    points="0,8 10,10 20,12 30,11 40,13 50,15 60,14" />
+                                            </svg>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Product Row 4 -->
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors group">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <div class="relative">
+                                                <img class="h-12 w-12 rounded-lg object-cover shadow-sm"
+                                                    src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg"
+                                                    alt="Phone Case">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div
+                                                    class="text-sm font-semibold text-gray-900 dark:text-gray-200 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                                                    Phone Case
+                                                </div>
+                                                <div class="text-xs text-gray-500 dark:text-gray-400">
+                                                    SKU: PC-2024-004
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm font-bold text-gray-900 dark:text-gray-200">$24.99</div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <span
+                                                class="text-sm font-semibold text-gray-900 dark:text-gray-200">152</span>
+                                            <span class="ml-2 text-xs text-green-600 dark:text-green-400">+5%</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm font-bold text-green-600 dark:text-green-400">$3,798</div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300">
+                                                <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd"
+                                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                        clipRule="evenodd" />
+                                                </svg>
+                                                In Stock
+                                            </span>
+                                            <span class="ml-2 text-xs text-gray-500 dark:text-gray-400">(234)</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="h-8 w-16">
+                                            <svg class="w-full h-full" viewBox="0 0 60 20">
+                                                <polyline fill="none" stroke="#10b981" strokeWidth="2"
+                                                    points="0,10 10,8 20,9 30,7 40,5 50,6 60,4" />
+                                            </svg>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Product Row 5 -->
+                                <tr class="hover:bg-gray-50 dark:hover:bg-gray-750 transition-colors group">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <div class="relative">
+                                                <img class="h-12 w-12 rounded-lg object-cover shadow-sm"
+                                                    src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg"
+                                                    alt="Portable Speaker">
+                                            </div>
+                                            <div class="ml-4">
+                                                <div
+                                                    class="text-sm font-semibold text-gray-900 dark:text-gray-200 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                                                    Portable Speaker
+                                                </div>
+                                                <div class="text-xs text-gray-500 dark:text-gray-400">
+                                                    SKU: PS-2024-005
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm font-bold text-gray-900 dark:text-gray-200">$79.99</div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <span
+                                                class="text-sm font-semibold text-gray-900 dark:text-gray-200">138</span>
+                                            <span class="ml-2 text-xs text-red-600 dark:text-red-400">-8%</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="text-sm font-bold text-green-600 dark:text-green-400">$11,039</div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300">
+                                                <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd"
+                                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                                                        clipRule="evenodd" />
+                                                </svg>
+                                                Out of Stock
+                                            </span>
+                                            <span class="ml-2 text-xs text-gray-500 dark:text-gray-400">(0)</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <div class="h-8 w-16">
+                                            <svg class="w-full h-full" viewBox="0 0 60 20">
+                                                <polyline fill="none" stroke="#ef4444" strokeWidth="2"
+                                                    points="0,5 10,7 20,10 30,12 40,14 50,16 60,18" />
+                                            </svg>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Footer -->
+                    <div
+                        class="px-6 py-4 bg-gray-50 dark:bg-gray-750 border-t border-gray-100 dark:border-gray-700 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <p class="text-sm text-gray-600 dark:text-gray-400">
+                                Showing <span class="font-semibold">Top 5</span> products
+                            </p>
+                            <div class="flex items-center space-x-2">
+                                <button
+                                    class="px-3 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                    Daily
+                                </button>
+                                <button
+                                    class="px-3 py-1 text-xs font-medium text-white bg-purple-600 rounded-md hover:bg-purple-700 transition-colors">
+                                    Weekly
+                                </button>
+                                <button
+                                    class="px-3 py-1 text-xs font-medium text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                                    Monthly
+                                </button>
+                            </div>
+                        </div>
+                        <button
+                            class="inline-flex items-center px-4 py-2 text-sm font-medium text-purple-600 dark:text-purple-400 bg-white dark:bg-gray-800 border border-purple-200 dark:border-purple-800 rounded-lg hover:bg-purple-50 dark:hover:bg-gray-700 transition-colors">
+                            View All Products
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>

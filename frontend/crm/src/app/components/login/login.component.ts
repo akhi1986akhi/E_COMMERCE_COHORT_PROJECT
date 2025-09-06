@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { LoginCredentials, LoginResponse } from '../../interfaces/login.interface';
+
 
 @Component({
   selector: 'app-login',
@@ -7,11 +8,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-loginForm ={
-  email:'',
-  password:''
-}
-showPassword= false;
+  loginForm:LoginCredentials = {
+    email: '',
+    password: ''
+  }
+  showPassword: boolean = false;
+  isLoading: boolean = false;
+  errorMessage: string = '';
 
   constructor() { }
 
@@ -23,10 +26,10 @@ showPassword= false;
     console.log(this.loginForm);
     // Handle form submission here
   }
-  togglePasswordVisibility(){
+  togglePasswordVisibility(): void {
 
-    this.showPassword= !this.showPassword
+    this.showPassword = !this.showPassword
   }
-  onLogin(){
+  onLogin(): void {
   }
 }

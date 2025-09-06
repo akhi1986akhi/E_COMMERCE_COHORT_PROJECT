@@ -21,7 +21,7 @@
       </div>
 
       <!-- Login Form -->
-      <form class="space-y-6">
+      <form class="space-y-6" (ngSubmit)="onLogin()">
         <!-- Email Input -->
         <div class="space-y-2">
           <label for="email" class="block text-sm font-medium text-gray-200">
@@ -99,7 +99,7 @@
         <button 
           type="submit"
           class="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-transparent shadow-lg"
-          (click)="onLogin()">
+         >
           Sign In
         </button>
 
@@ -139,7 +139,7 @@
       <div class="mt-6 text-center">
         <p class="text-gray-300">
           Don't have an account? 
-          <a href="#" class="text-blue-400 hover:text-blue-300 font-medium transition-colors">
+          <a href="#" #signup id="signup" class="text-blue-400 hover:text-blue-300 font-medium transition-colors">
             Sign up
           </a>
         </p>

@@ -1,0 +1,587 @@
+<div class="bg-white dark:bg-gray-800 min-h-screen">
+    <!-- Header Section with Order Statistics -->
+    <div class="border-b border-gray-100 dark:border-gray-700">
+        <div class=" mx-auto px-8 py-6">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Order Management</h1>
+                    <p class="text-gray-500 dark:text-gray-400">Manage and process your customer orders</p>
+                </div>
+                <div class="mt-4 md:mt-0 flex space-x-3">
+                    <button class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-medium transition-colors flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                        Create New Order
+                    </button>
+                    <button class="px-4 py-2 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium transition-colors flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                        </svg>
+                        Export
+                    </button>
+                </div>
+            </div>
+
+            <!-- Order Statistics Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <!-- Total Orders Card -->
+                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-md border border-gray-100 dark:border-gray-700 p-6 transition-all hover:shadow-lg">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Total Orders</p>
+                            <div class="flex items-end">
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mr-2">1,482</h3>
+                                <span class="text-xs text-green-600 dark:text-green-400 flex items-center pb-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                                    </svg>
+                                    8.4%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div class="h-full bg-indigo-500 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <!-- Pending Orders Card -->
+                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-md border border-gray-100 dark:border-gray-700 p-6 transition-all hover:shadow-lg">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Pending Orders</p>
+                            <div class="flex items-end">
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mr-2">42</h3>
+                                <span class="text-xs text-red-600 dark:text-red-400 flex items-center pb-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 13a1 1 0 100 2h5a1 1 0 001-1V9a1 1 0 10-2 0v2.586l-4.293-4.293a1 1 0 00-1.414 0L8 9.586 3.707 5.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0L11 9.414 14.586 13H12z" clip-rule="evenodd" />
+                                    </svg>
+                                    3.2%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div class="h-full bg-amber-500 rounded-full" style="width: 25%"></div>
+                    </div>
+                </div>
+
+                <!-- Completed Orders Card -->
+                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-md border border-gray-100 dark:border-gray-700 p-6 transition-all hover:shadow-lg">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/50 flex items-center justify-center mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Completed Orders</p>
+                            <div class="flex items-end">
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mr-2">1,125</h3>
+                                <span class="text-xs text-green-600 dark:text-green-400 flex items-center pb-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                                    </svg>
+                                    12.3%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div class="h-full bg-green-500 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Average Order Value Card -->
+                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-md border border-gray-100 dark:border-gray-700 p-6 transition-all hover:shadow-lg">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Average Order Value</p>
+                            <div class="flex items-end">
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mr-2">$134.28</h3>
+                                <span class="text-xs text-green-600 dark:text-green-400 flex items-center pb-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                                    </svg>
+                                    6.7%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div class="h-full bg-purple-500 rounded-full" style="width: 65%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class=" mx-auto px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Create New Order Form -->
+            <div class="lg:col-span-1">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden">
+                    <div class="px-6 py-5 border-b border-gray-100 dark:border-gray-700 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 dark:from-indigo-900/20 dark:to-purple-900/20">
+                        <h2 class="text-lg font-bold text-gray-900 dark:text-white flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                            </svg>
+                            Create New Order
+                        </h2>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 ml-7">Enter order details below</p>
+                    </div>
+                    
+                    <div class="p-6">
+                        <form>
+                            <!-- Customer Selection -->
+                            <div class="mb-5">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Customer</label>
+                                <div class="relative">
+                                    <select class="appearance-none block w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                                        <option value="">Select a customer</option>
+                                        <option value="1">Emma Wilson</option>
+                                        <option value="2">James Rodriguez</option>
+                                        <option value="3">Olivia Thompson</option>
+                                        <option value="4">New Customer</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 dark:text-gray-300">
+                                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Products Selection -->
+                            <div class="mb-5">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Products</label>
+                                <div class="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-4 mb-4">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Laptop Pro X1</p>
+                                        <div class="flex items-center">
+                                            <div class="flex items-center mr-4">
+                                                <button class="p-1 rounded-md bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+                                                    </svg>
+                                                </button>
+                                                <span class="mx-2 text-gray-700 dark:text-gray-300">1</span>
+                                                <button class="p-1 rounded-md bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">$999.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="text-xs text-gray-500 dark:text-gray-400 flex items-center justify-between">
+                                        <span>SKU: LP-X1-001</span>
+                                        <button class="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300">Remove</button>
+                                    </div>
+                                </div>
+                                
+                                <button type="button" class="w-full py-2 px-4 border border-dashed border-gray-300 dark:border-gray-600 rounded-lg text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors text-sm flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                    Add Product
+                                </button>
+                            </div>
+                            
+                            <!-- Shipping & Payment -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Shipping Method</label>
+                                    <select class="appearance-none block w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                                        <option>Standard Shipping</option>
+                                        <option>Express Shipping</option>
+                                        <option>Next Day Delivery</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Payment Method</label>
+                                    <select class="appearance-none block w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                                        <option>Credit Card</option>
+                                        <option>PayPal</option>
+                                        <option>Bank Transfer</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <!-- Order Notes -->
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Order Notes</label>
+                                <textarea rows="3" class="appearance-none block w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Add any special instructions..."></textarea>
+                            </div>
+                            
+                            <!-- Order Summary -->
+                            <div class="bg-gray-50 dark:bg-gray-900/50 rounded-xl p-4 mb-6">
+                                <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Order Summary</h3>
+                                <div class="space-y-2 text-sm">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-500 dark:text-gray-400">Subtotal</span>
+                                        <span class="text-gray-700 dark:text-gray-300">$999.00</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-500 dark:text-gray-400">Shipping</span>
+                                        <span class="text-gray-700 dark:text-gray-300">$12.99</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-500 dark:text-gray-400">Tax</span>
+                                        <span class="text-gray-700 dark:text-gray-300">$89.91</span>
+                                    </div>
+                                    <div class="border-t border-gray-200 dark:border-gray-700 pt-2 mt-2">
+                                        <div class="flex justify-between font-medium">
+                                            <span class="text-gray-700 dark:text-gray-300">Total</span>
+                                            <span class="text-indigo-600 dark:text-indigo-400">$1,101.90</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <button type="submit" class="w-full px-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-medium transition-colors">
+                                Create Order
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Order Lists -->
+            <div class="lg:col-span-2">
+                <!-- Tabs -->
+                <div class="flex border-b border-gray-200 dark:border-gray-700 mb-6">
+                    <button class="px-4 py-3 text-sm font-medium text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 dark:border-indigo-400">
+                        All Orders
+                    </button>
+                    <button class="px-4 py-3 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 border-b-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600">
+                        New
+                        <span class="ml-1 px-2 py-0.5 text-xs bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 rounded-full">8</span>
+                    </button>
+                    <button class="px-4 py-3 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 border-b-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600">
+                        Pending
+                        <span class="ml-1 px-2 py-0.5 text-xs bg-amber-100 dark:bg-amber-900 text-amber-600 dark:text-amber-400 rounded-full">42</span>
+                    </button>
+                    <button class="px-4 py-3 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 border-b-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600">
+                        Completed
+                        <span class="ml-1 px-2 py-0.5 text-xs bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 rounded-full">1,125</span>
+                    </button>
+                </div>
+                
+                <!-- Search and Filter Bar -->
+                <div class="flex flex-col md:flex-row gap-4 mb-6">
+                    <div class="relative flex-1">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                        <input type="text" class="block w-full pl-10 pr-4 py-2.5 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Search orders by ID, customer or product...">
+                    </div>
+                    <div class="flex space-x-3">
+                        <select class="pl-4 pr-10 py-2.5 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            <option>All Time</option>
+                            <option>Today</option>
+                            <option>Yesterday</option>
+                            <option>This Week</option>
+                            <option>This Month</option>
+                        </select>
+                        <button class="p-2.5 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Orders List -->
+                <div class="space-y-5">
+                    <!-- Order Item -->
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden transition-all hover:shadow-md">
+                        <div class="p-5">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 mr-4">
+                                        <div class="w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-bold text-gray-900 dark:text-white flex items-center">
+                                            Order #3245
+                                            <span class="ml-2 px-2 py-0.5 text-xs bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 rounded-full">New</span>
+                                        </h3>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400">Placed 15 minutes ago</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-start sm:items-end">
+                                    <span class="text-lg font-bold text-gray-900 dark:text-white">$1,293.25</span>
+                                    <span class="text-sm text-gray-500 dark:text-gray-400">3 items</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-5 grid grid-cols-1 md:grid-cols-3 gap-5">
+                                <div>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Customer</p>
+                                    <div class="flex items-center">
+                                        <img src="https://randomuser.me/api/portraits/women/23.jpg" alt="Customer" class="w-6 h-6 rounded-full mr-2">
+                                        <p class="text-sm font-medium text-gray-900 dark:text-white">Emma Thompson</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Shipping</p>
+                                    <p class="text-sm font-medium text-gray-900 dark:text-white">Express Shipping</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Payment</p>
+                                    <div class="flex items-center">
+                                        <svg class="h-4 w-4 text-indigo-600 dark:text-indigo-400 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 14H4V6h16v12zM6.5 12h2a.5.5 0 000-1h-2a.5.5 0 000 1zM6.5 9h2a.5.5 0 000-1h-2a.5.5 0 000 1zm0 6h2a.5.5 0 000-1h-2a.5.5 0 000 1zm7.5-3a2 2 0 100-4 2 2 0 000 4z" />
+                                        </svg>
+                                        <p class="text-sm font-medium text-gray-900 dark:text-white">Credit Card</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-5 flex flex-wrap gap-3">
+                                <button class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-medium transition-colors">
+                                    Process Order
+                                </button>
+                                <button class="px-4 py-2 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium transition-colors">
+                                    View Details
+                                </button>
+                                <button class="px-4 py-2 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium transition-colors">
+                                    Print Invoice
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Order Item - Pending -->
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden transition-all hover:shadow-md">
+                        <div class="p-5">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 mr-4">
+                                        <div class="w-12 h-12 rounded-full bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-600 dark:text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-bold text-gray-900 dark:text-white flex items-center">
+                                            Order #3244
+                                            <span class="ml-2 px-2 py-0.5 text-xs bg-amber-100 dark:bg-amber-900 text-amber-600 dark:text-amber-400 rounded-full">Pending</span>
+                                        </h3>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400">Placed 2 hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-start sm:items-end">
+                                    <span class="text-lg font-bold text-gray-900 dark:text-white">$842.50</span>
+                                    <span class="text-sm text-gray-500 dark:text-gray-400">2 items</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-5 grid grid-cols-1 md:grid-cols-3 gap-5">
+                                <div>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Customer</p>
+                                    <div class="flex items-center">
+                                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Customer" class="w-6 h-6 rounded-full mr-2">
+                                        <p class="text-sm font-medium text-gray-900 dark:text-white">Michael Rodriguez</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Shipping</p>
+                                    <p class="text-sm font-medium text-gray-900 dark:text-white">Standard Shipping</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Payment</p>
+                                    <div class="flex items-center">
+                                        <svg class="h-4 w-4 text-blue-600 dark:text-blue-400 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M19.885 5.515c.687.687 1.115 1.636 1.115 2.485s-.428 1.798-1.115 2.485c-.687.687-1.636 1.115-2.485 1.115s-1.798-.428-2.485-1.115c-.687-.687-1.115-1.636-1.115-2.485s.428-1.798 1.115-2.485c.687-.687 1.636-1.115 2.485-1.115s1.798.428 2.485 1.115z" />
+                                            <path d="M3.908 13.301l3.249-3.249c.483-.483 1.137-.753 1.819-.753.682 0 1.336.27 1.819.753l6.248 6.248c.483.483.753 1.137.753 1.819 0 .682-.27 1.336-.753 1.819l-3.249 3.249c-.483.483-1.137.753-1.819.753-.682 0-1.336-.27-1.819-.753l-6.248-6.248c-.483-.483-.753-1.137-.753-1.819 0-.682.27-1.336.753-1.819z" />
+                                        </svg>
+                                        <p class="text-sm font-medium text-gray-900 dark:text-white">PayPal</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-5 flex flex-wrap gap-3">
+                                <button class="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-sm font-medium transition-colors">
+                                    Mark as Shipped
+                                </button>
+                                <button class="px-4 py-2 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium transition-colors">
+                                    View Details
+                                </button>
+                                <button class="px-4 py-2 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium transition-colors">
+                                    Print Invoice
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Order Item - Completed -->
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden transition-all hover:shadow-md">
+                        <div class="p-5">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 mr-4">
+                                        <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/50 flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-bold text-gray-900 dark:text-white flex items-center">
+                                            Order #3242
+                                            <span class="ml-2 px-2 py-0.5 text-xs bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 rounded-full">Completed</span>
+                                        </h3>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400">Placed 1 day ago</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-start sm:items-end">
+                                    <span class="text-lg font-bold text-gray-900 dark:text-white">$356.75</span>
+                                    <span class="text-sm text-gray-500 dark:text-gray-400">1 item</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-5 grid grid-cols-1 md:grid-cols-3 gap-5">
+                                <div>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Customer</p>
+                                    <div class="flex items-center">
+                                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Customer" class="w-6 h-6 rounded-full mr-2">
+                                        <p class="text-sm font-medium text-gray-900 dark:text-white">Sophie Chen</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Shipping</p>
+                                    <p class="text-sm font-medium text-gray-900 dark:text-white">Next Day Delivery</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Payment</p>
+                                    <div class="flex items-center">
+                                        <svg class="h-4 w-4 text-indigo-600 dark:text-indigo-400 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 14H4V6h16v12zM6.5 12h2a.5.5 0 000-1h-2a.5.5 0 000 1zM6.5 9h2a.5.5 0 000-1h-2a.5.5 0 000 1zm0 6h2a.5.5 0 000-1h-2a.5.5 0 000 1zm7.5-3a2 2 0 100-4 2 2 0 000 4z" />
+                                        </svg>
+                                        <p class="text-sm font-medium text-gray-900 dark:text-white">Credit Card</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-5 flex flex-wrap gap-3">
+                                <button class="px-4 py-2 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium transition-colors">
+                                    View Details
+                                </button>
+                                <button class="px-4 py-2 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-600 rounded-lg text-sm font-medium transition-colors">
+                                    Print Invoice
+                                </button>
+                                <button class="px-4 py-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 rounded-lg text-sm font-medium transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="flex items-center justify-between border-t border-gray-200 dark:border-gray-700 pt-6">
+                        <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+                            <div>
+                                <p class="text-sm text-gray-700 dark:text-gray-300">
+                                    Showing <span class="font-medium">1</span> to <span class="font-medium">3</span> of <span class="font-medium">1,482</span> results
+                                </p>
+                            </div>
+                            <div>
+                                <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                                    <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700">
+                                        <span class="sr-only">Previous</span>
+                                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                    <a href="#" aria-current="page" class="z-10 bg-indigo-50 dark:bg-indigo-900/30 border-indigo-500 dark:border-indigo-500 text-indigo-600 dark:text-indigo-400 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                                        1
+                                    </a>
+                                    <a href="#" class="bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                                        2
+                                    </a>
+                                    <a href="#" class="bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                                        3
+                                    </a>
+                                    <span class="relative inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm font-medium text-gray-700 dark:text-gray-300">
+                                        ...
+                                    </span>
+                                    <a href="#" class="bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                                        98
+                                    </a>
+                                    <a href="#" class="bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                                        99
+                                    </a>
+                                    <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700">
+                                        <span class="sr-only">Next</span>
+                                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 163, 175, 0.3);
+    border-radius: 20px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(156, 163, 175, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: rgba(75, 85, 99, 0.5);
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(75, 85, 99, 0.7);
+    }
+}
+</style>
