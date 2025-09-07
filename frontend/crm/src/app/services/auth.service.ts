@@ -5,13 +5,16 @@ import { HttpClient } from '@angular/common/http';
 import { LoginCredentials, LoginResponse } from '../interfaces/login.interface';
 import { Observable } from 'rxjs/internal/Observable';
 import { tap } from 'rxjs';
+import { environment } from '../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-   private apiUrl = 'https://your-api.com/auth'; // Replace with your backend API
+  
+  private apiUrl = environment.apiUrl // Replace with your backend API
+
   private currentUserSubject = new BehaviorSubject<User | null>(null);
   currentUser$ = this.currentUserSubject.asObservable();
 
@@ -22,19 +25,20 @@ export class AuthService {
     }
   }
 
-/** Login method */
-login(credentials: LoginCredentials): Observable<LoginResponse> {
-  return this.http.post<LoginResponse>(`${this.apiUrl}/login`, credentials).pipe(
-    tap((response) => {
-      if (response.success && response.data) {
-        this.storeAuthData(response.data.token, response.data.user, credentials.rememberMe);
-        this.currentUserSubject.next(response.data.user);
-      } else {
-        this.currentUserSubject.next(null);
-      }
-    })
-  );
-}
+  /** Login method */
+  login(credentials: LoginCredentials): Observable<LoginResponse> {
+    console.log("API URL: ", this.apiUrl)
+    return this.http.post<LoginResponse>(`${this.apiUrl}users/login`, credentials).pipe(
+      tap((response) => {
+        if (response.success && response.data) {
+          this.storeAuthData(response.data.token, response.data.user, credentials.rememberMe);
+          this.currentUserSubject.next(response.data.user);
+        } else {
+          this.currentUserSubject.next(null);
+        }
+      })
+    );
+  }
 
   /** Logout method */
   logout(): void {

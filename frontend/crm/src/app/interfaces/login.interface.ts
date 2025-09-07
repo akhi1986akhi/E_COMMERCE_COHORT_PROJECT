@@ -17,7 +17,7 @@ export interface LoginResponse {
   data?: {
     token: string;
     user: User;
-  };
+  },
   error?: string;
 }
 

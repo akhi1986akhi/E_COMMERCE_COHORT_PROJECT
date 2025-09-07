@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginCredentials, LoginResponse } from '../../interfaces/login.interface';
-
+import { LoginCredentials } from '../../interfaces/login.interface';
+import { AuthService } from 'src/app/services/auth.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,28 +10,59 @@ import { LoginCredentials, LoginResponse } from '../../interfaces/login.interfac
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginForm:LoginCredentials = {
-    email: '',
-    password: ''
-  }
+  loginForm!: FormGroup;
   showPassword: boolean = false;
   isLoading: boolean = false;
+
+  successMessage: string = '';
   errorMessage: string = '';
 
-  constructor() { }
-
-  ngOnInit(): void {
-    this.loginForm
+  constructor(
+    private _authService: AuthService,
+    private fb: FormBuilder,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
+      rememberMe: [false]
+    });
   }
 
-  onSubmit(): void {
-    console.log(this.loginForm);
-    // Handle form submission here
-  }
+  ngOnInit(): void {}
+
   togglePasswordVisibility(): void {
-
-    this.showPassword = !this.showPassword
+    this.showPassword = !this.showPassword;
   }
+
   onLogin(): void {
+    if (this.loginForm.invalid) return;
+
+    this.isLoading = true;
+    this.successMessage = '';
+    this.errorMessage = '';
+
+    const credentials: LoginCredentials = this.loginForm.value;
+
+    this._authService.login(credentials).subscribe({
+      next: (response) => {
+        this.isLoading = false;
+        if (response.success) {
+          this.successMessage = 'Sign in successful!';
+          setTimeout(() => {
+            this.successMessage = '';
+            const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/dashboard';
+            this.router.navigateByUrl(returnUrl);
+          }, 2000); // 2 seconds
+        } else {
+          this.errorMessage = response.message || 'Login failed. Please try again.';
+        }
+      },
+      error: (err) => {
+        this.isLoading = false;
+        this.errorMessage = err.error?.message || 'An error occurred. Please try again later.';
+      }
+    });
   }
 }

@@ -126,8 +126,7 @@ const loginUser = async (req, res) => {
     res.status(200).json({
       success: true,
       message: 'Login successful',
-      data: user,
-      token // optional: in case you also want to send token in body
+      data: {user:user,token:token}
     });
   } catch (error) {
     res.status(500).json({
