@@ -7,7 +7,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
-
+const cookieParser = require('cookie-parser');
 // Route imports
 const userRoutes = require('./src/routes/userRoutes');
 const addresses = require('./src/routes/addressesRoutes');
@@ -18,9 +18,13 @@ const brand = require('./src/routes/brandRoutes');
 
 // Security middleware
 // app.use(helmet());
-app.use(cors());
-app.use(express.json({ limit: '10mb' }));
+app.use(cors({
+  origin: 'http://localhost:4200', // 👈 frontend origin
+  credentials: true               // 👈 allow cookies (credentials)
+}));
 
+app.use(express.json({ limit: '10mb' }));
+app.use(cookieParser());
 // Rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes

@@ -8,12 +8,15 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { SidebarComponent } from './components/layout/sidebar/sidebar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { TableComponent } from './components/shared/table/table.component';
 import { HomeComponent } from './components/home/home.component';
 import { OrderComponent } from './components/order/order.component';
 import { CustomerComponent } from './components/customer/customer.component';
-import { ProductComponent } from './components/product/product.component'
+import { ProductComponent } from './components/product/product.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +37,13 @@ import { ProductComponent } from './components/product/product.component'
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+ providers: [
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: AuthInterceptor,
+    //   multi: true
+    // }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

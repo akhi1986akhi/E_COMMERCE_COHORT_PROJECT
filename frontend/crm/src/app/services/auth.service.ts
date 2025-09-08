@@ -28,7 +28,7 @@ export class AuthService {
   /** Login method */
   login(credentials: LoginCredentials): Observable<LoginResponse> {
     console.log("API URL: ", this.apiUrl)
-    return this.http.post<LoginResponse>(`${this.apiUrl}users/login`, credentials).pipe(
+    return this.http.post<LoginResponse>(`${this.apiUrl}users/login`, credentials,{ withCredentials: true }).pipe(
       tap((response) => {
         if (response.success && response.data) {
           this.storeAuthData(response.data.token, response.data.user, credentials.rememberMe);

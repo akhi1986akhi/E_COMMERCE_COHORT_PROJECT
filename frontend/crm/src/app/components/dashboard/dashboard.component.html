@@ -1,11 +1,11 @@
 <div class="flex h-screen bg-gray-100">
     <!-- Sidebar -->
-    <app-sidebar/>
+   <app-sidebar ></app-sidebar>
 
     <!-- Main Content -->
     <div class="flex-1 overflow-auto">
         <!-- Header -->
-        <header class="bg-white shadow-sm">
+        <header  class="bg-white shadow-sm">
             <div class="flex justify-between items-center px-8 py-4">
                 <div class="flex items-center">
                     <h2 class="text-xl font-semibold">Dashboard</h2>
@@ -22,7 +22,7 @@
                     <div class="flex items-center">
                         <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User"
                             class="h-10 w-10 rounded-full">
-                        <span class="ml-2 text-gray-700">John Doe</span>
+                        <span class="ml-2 text-gray-700">{{this.user.fullName}}</span>
                     </div>
                 </div>
             </div>
