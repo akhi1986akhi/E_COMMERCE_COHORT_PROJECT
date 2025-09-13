@@ -434,7 +434,10 @@
                 <!-- Products Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mb-8">
                     <!-- Product Card - Featured -->
+                    <ng-container *ngFor="let item of products">
                     <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden transition-all hover:shadow-md">
+
+
                         <div class="relative">
                             <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Product" class="w-full h-52 object-cover">
                             <div class="absolute top-0 left-0 mt-3 ml-3">
@@ -448,6 +451,7 @@
                                 </span>
                             </div>
                         </div>
+                   
                         <div class="p-4">
                             <div class="flex justify-between items-start">
                                 <div>
@@ -482,6 +486,7 @@
                             </div>
                         </div>
                     </div>
+                </ng-container>
                     
                     <!-- Product Card - Low Stock -->
                     <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden transition-all hover:shadow-md">
