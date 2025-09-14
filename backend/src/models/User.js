@@ -1,5 +1,6 @@
 // models/User.js
 const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate-v2'); 
 const bcrypt = require('bcryptjs');
 
 const userSchema = new mongoose.Schema({
@@ -128,5 +129,5 @@ userSchema.methods.createPasswordResetToken = function() {
   
   return resetToken;
 };
-
+userSchema.plugin(mongoosePaginate);
 module.exports = mongoose.model('User', userSchema);
