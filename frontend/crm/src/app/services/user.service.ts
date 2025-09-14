@@ -15,4 +15,10 @@ export class UserService {
       withCredentials: true   // 👈 ensures cookies are sent
     });
   }
+
+  getUsers(page: number, limit: number) {
+    return this.http.get<{ docs: any[], totalDocs: number, limit: number, totalPages: number, page: number, pagingCounter: number, hasPrevPage: boolean, hasNextPage: boolean, prevPage: number | null, nextPage: number | null }>(this.apiUrl + `users?page=${page}&limit=${limit}`, {
+      withCredentials: true   // 👈 ensures cookies are sent
+    });
+  }
 }
