@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import {
   Search,
   ShoppingCart,
@@ -11,13 +10,17 @@ import {
   X,
   Phone,
   MapPin,
-  ChevronDown
+  ChevronDown,
+  Sparkles,
+  Gift,
+  Star
 } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
 
   // Handle scroll event to change header appearance
   useEffect(() => {
@@ -41,134 +44,207 @@ const Header = () => {
     setIsSearchOpen(!isSearchOpen);
   };
 
+  const toggleUserMenu = () => {
+    setIsUserMenuOpen(!isUserMenuOpen);
+  };
+
   return (
     <>
-      {/* Top Announcement Bar */}
-      <div className="bg-indigo-700 text-white text-sm py-2 px-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center">
-            <Phone size={14} className="mr-2" />
-            <span>Support: (555) 123-4567</span>
+      {/* Top Announcement Bar with Gradient */}
+      <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white text-sm py-3 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
+        <div className="container mx-auto flex justify-between items-center relative z-10">
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center">
+              <Phone size={14} className="mr-2 text-purple-200" />
+              <span className="font-medium">24/7 Support: (555) 123-4567</span>
+            </div>
           </div>
-          <div className="hidden md:flex items-center">
-            <MapPin size={14} className="mr-2" />
-            <span>Track Order</span>
+          <div className="hidden md:flex items-center space-x-6">
+            <div className="flex items-center">
+              <MapPin size={14} className="mr-2 text-purple-200" />
+              <span className="font-medium hover:text-purple-200 cursor-pointer transition-colors">Track Order</span>
+            </div>
           </div>
           <div className="flex items-center">
-            <span>Free shipping on all orders over $50!</span>
+            <Sparkles size={14} className="mr-2 text-yellow-300" />
+            <span className="font-semibold">Free shipping on orders $50+!</span>
           </div>
         </div>
       </div>
 
       {/* Main Header */}
       <header
-        className={`sticky top-0 w-full z-50 transition-all duration-300 ${
+        className={`sticky top-0 w-full z-50 transition-all duration-500 ease-out ${
           isScrolled
-            ? 'bg-white shadow-md py-2'
-            : 'bg-white border-b border-gray-200 py-4'
+            ? 'bg-white/95 backdrop-blur-lg shadow-xl border-b border-gray-100 py-3'
+            : 'bg-white/98 backdrop-blur-sm border-b border-gray-200/50 py-5'
         }`}
       >
         <div className="container mx-auto px-4">
           {/* Main header content */}
           <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link href="/" className="flex items-center">
-              <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center mr-2">
-                <span className="text-white font-bold text-xl">S</span>
-              </div>
-              <span className="font-bold text-2xl text-indigo-600">ShopNow</span>
-            </Link>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex space-x-8">
-              <div className="relative group">
-                <button className="flex items-center font-medium text-gray-700 hover:text-indigo-600 transition-colors">
-                  Categories
-                  <ChevronDown size={16} className="ml-1" />
-                </button>
-                <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-lg p-4 w-48 mt-2">
-                  <Link href="/category/electronics" className="block py-2 px-4 text-gray-700 hover:bg-indigo-50 rounded">Electronics</Link>
-                  <Link href="/category/fashion" className="block py-2 px-4 text-gray-700 hover:bg-indigo-50 rounded">Fashion</Link>
-                  <Link href="/category/home" className="block py-2 px-4 text-gray-700 hover:bg-indigo-50 rounded">Home & Kitchen</Link>
-                  <Link href="/category/beauty" className="block py-2 px-4 text-gray-700 hover:bg-indigo-50 rounded">Beauty</Link>
+            {/* Enhanced Logo */}
+            <div className="flex items-center group cursor-pointer">
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 rounded-2xl flex items-center justify-center mr-3 shadow-lg transform group-hover:scale-105 transition-all duration-300">
+                  <span className="text-white font-black text-xl">S</span>
+                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center">
+                    <Star size={8} className="text-yellow-800" />
+                  </div>
                 </div>
               </div>
-              <Link
-                href="/deals"
-                className="font-medium text-red-600 hover:text-red-700 transition-colors"
-              >
-                Deals
-              </Link>
-              <Link
-                href="/new-arrivals"
-                className="font-medium text-gray-700 hover:text-indigo-600 transition-colors"
-              >
-                New Arrivals
-              </Link>
-              <Link
-                href="/brands"
-                className="font-medium text-gray-700 hover:text-indigo-600 transition-colors"
-              >
-                Brands
-              </Link>
-            </nav>
-
-            {/* Search Bar - Desktop */}
-            <div className="hidden md:flex flex-1 max-w-lg mx-8">
-              <div className="relative w-full">
-                <input
-                  type="text"
-                  placeholder="Search for products..."
-                  className="w-full py-2 pl-4 pr-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                />
-                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-indigo-600 p-1.5 rounded-full">
-                  <Search size={18} className="text-white" />
-                </button>
+              <div>
+                <span className="font-black text-2xl bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                  ShopNow
+                </span>
+                <div className="text-xs text-gray-500 font-medium -mt-1">Premium Store</div>
               </div>
             </div>
 
-            {/* Action Icons */}
-            <div className="flex items-center space-x-5">
+            {/* Enhanced Desktop Navigation */}
+            <nav className="hidden lg:flex space-x-8">
+              <div className="relative group">
+                <button className="flex items-center font-semibold text-gray-700 hover:text-indigo-600 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-indigo-50">
+                  Categories
+                  <ChevronDown size={16} className="ml-1 transform group-hover:rotate-180 transition-transform duration-300" />
+                </button>
+                <div className="absolute hidden group-hover:block bg-white shadow-2xl rounded-2xl p-6 w-64 mt-2 border border-gray-100">
+                  <div className="grid gap-3">
+                    <a href="#" className="flex items-center py-3 px-4 text-gray-700 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 rounded-xl transition-all duration-300 group/item">
+                      <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg mr-3 flex items-center justify-center">
+                        <span className="text-white text-xs">📱</span>
+                      </div>
+                      <span className="font-medium group-hover/item:text-indigo-600">Electronics</span>
+                    </a>
+                    <a href="#" className="flex items-center py-3 px-4 text-gray-700 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 rounded-xl transition-all duration-300 group/item">
+                      <div className="w-8 h-8 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg mr-3 flex items-center justify-center">
+                        <span className="text-white text-xs">👗</span>
+                      </div>
+                      <span className="font-medium group-hover/item:text-indigo-600">Fashion</span>
+                    </a>
+                    <a href="#" className="flex items-center py-3 px-4 text-gray-700 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 rounded-xl transition-all duration-300 group/item">
+                      <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg mr-3 flex items-center justify-center">
+                        <span className="text-white text-xs">🏠</span>
+                      </div>
+                      <span className="font-medium group-hover/item:text-indigo-600">Home & Kitchen</span>
+                    </a>
+                    <a href="#" className="flex items-center py-3 px-4 text-gray-700 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 rounded-xl transition-all duration-300 group/item">
+                      <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-pink-600 rounded-lg mr-3 flex items-center justify-center">
+                        <span className="text-white text-xs">💄</span>
+                      </div>
+                      <span className="font-medium group-hover/item:text-indigo-600">Beauty</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="#"
+                className="flex items-center font-semibold text-red-600 hover:text-red-700 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-red-50 relative"
+              >
+                <Gift size={16} className="mr-1" />
+                Hot Deals
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+              </a>
+              <a
+                href="#"
+                className="font-semibold text-gray-700 hover:text-indigo-600 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-indigo-50"
+              >
+                New Arrivals
+              </a>
+              <a
+                href="#"
+                className="font-semibold text-gray-700 hover:text-indigo-600 transition-all duration-300 py-2 px-4 rounded-lg hover:bg-indigo-50"
+              >
+                Brands
+              </a>
+            </nav>
+
+            {/* Enhanced Search Bar - Desktop */}
+            <div className="hidden md:flex flex-1 max-w-xl mx-8">
+              <div className="relative w-full group">
+                <input
+                  type="text"
+                  placeholder="Search for products, brands, categories..."
+                  className="w-full py-3 pl-6 pr-14 border-2 border-gray-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all duration-300 bg-gray-50 focus:bg-white shadow-sm"
+                />
+                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-indigo-600 to-purple-600 p-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  <Search size={20} className="text-white" />
+                </button>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+              </div>
+            </div>
+
+            {/* Enhanced Action Icons */}
+            <div className="flex items-center space-x-2">
               <button 
                 onClick={toggleSearch}
-                className="md:hidden text-gray-700 hover:text-indigo-600"
+                className="md:hidden text-gray-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50 transition-all duration-300"
               >
                 <Search size={22} />
               </button>
-              <button className="relative text-gray-700 hover:text-indigo-600">
+              
+              <button className="relative text-gray-700 hover:text-red-600 p-2 rounded-lg hover:bg-red-50 transition-all duration-300 group">
                 <Heart size={22} />
-                <span className="absolute -top-2 -right-2 bg-indigo-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold shadow-lg transform group-hover:scale-110 transition-transform duration-300">
                   3
                 </span>
               </button>
-              <button className="relative text-gray-700 hover:text-indigo-600">
+              
+              <button className="relative text-gray-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50 transition-all duration-300 group">
                 <ShoppingCart size={22} />
-                <span className="absolute -top-2 -right-2 bg-indigo-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold shadow-lg transform group-hover:scale-110 transition-transform duration-300">
                   2
                 </span>
               </button>
-              <button className="text-gray-700 hover:text-indigo-600">
-                <User size={22} />
-              </button>
+              
+              <div className="relative">
+                <button 
+                  onClick={toggleUserMenu}
+                  className="text-gray-700 hover:text-indigo-600 p-2 rounded-lg hover:bg-indigo-50 transition-all duration-300"
+                >
+                  <User size={22} />
+                </button>
+                
+                {/* User Dropdown */}
+                {isUserMenuOpen && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-2xl shadow-2xl border border-gray-100 py-2 z-50">
+                    <a href="#" className="block px-4 py-3 text-gray-700 hover:bg-indigo-50 transition-colors font-medium">
+                      My Account
+                    </a>
+                    <a href="#" className="block px-4 py-3 text-gray-700 hover:bg-indigo-50 transition-colors">
+                      Order History
+                    </a>
+                    <a href="#" className="block px-4 py-3 text-gray-700 hover:bg-indigo-50 transition-colors">
+                      Settings
+                    </a>
+                    <hr className="my-2" />
+                    <a href="#" className="block px-4 py-3 text-red-600 hover:bg-red-50 transition-colors">
+                      Sign Out
+                    </a>
+                  </div>
+                )}
+              </div>
+              
               <button
                 onClick={toggleMenu}
-                className="lg:hidden text-gray-700 ml-2"
+                className="lg:hidden text-gray-700 ml-2 p-2 rounded-lg hover:bg-gray-100 transition-all duration-300"
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
           </div>
 
-          {/* Mobile Search - appears when search icon is clicked */}
+          {/* Enhanced Mobile Search */}
           {isSearchOpen && (
-            <div className="md:hidden mt-4">
-              <div className="relative">
+            <div className="md:hidden mt-6 animate-fadeIn">
+              <div className="relative group">
                 <input
                   type="text"
                   placeholder="Search for products..."
-                  className="w-full py-2 pl-4 pr-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  className="w-full py-3 pl-6 pr-14 border-2 border-gray-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all duration-300 bg-gray-50 focus:bg-white"
                 />
-                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-indigo-600 p-1.5 rounded-full">
+                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-indigo-600 to-purple-600 p-2 rounded-xl">
                   <Search size={18} className="text-white" />
                 </button>
               </div>
@@ -176,48 +252,80 @@ const Header = () => {
           )}
         </div>
 
-        {/* Mobile Menu */}
+        {/* Enhanced Mobile Menu */}
         <div
-          className={`lg:hidden bg-white shadow-lg transition-all duration-300 ease-in-out ${
-            isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          className={`lg:hidden bg-white/95 backdrop-blur-lg shadow-2xl transition-all duration-500 ease-out border-t border-gray-100 ${
+            isMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
           } overflow-hidden`}
         >
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <div className="border-b pb-4">
-              <h3 className="font-semibold text-gray-700 mb-2">Categories</h3>
-              <div className="grid grid-cols-2 gap-2">
-                <Link href="/category/electronics" className="py-2 px-4 text-gray-700 hover:bg-indigo-50 rounded-lg">Electronics</Link>
-                <Link href="/category/fashion" className="py-2 px-4 text-gray-700 hover:bg-indigo-50 rounded-lg">Fashion</Link>
-                <Link href="/category/home" className="py-2 px-4 text-gray-700 hover:bg-indigo-50 rounded-lg">Home</Link>
-                <Link href="/category/beauty" className="py-2 px-4 text-gray-700 hover:bg-indigo-50 rounded-lg">Beauty</Link>
+          <div className="container mx-auto px-4 py-6 flex flex-col space-y-2">
+            <div className="border-b border-gray-100 pb-6 mb-4">
+              <h3 className="font-bold text-gray-800 mb-4 text-lg">Categories</h3>
+              <div className="grid grid-cols-2 gap-3">
+                <a href="#" className="flex items-center py-3 px-4 text-gray-700 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 rounded-xl transition-all duration-300">
+                  <span className="mr-2">📱</span>
+                  Electronics
+                </a>
+                <a href="#" className="flex items-center py-3 px-4 text-gray-700 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 rounded-xl transition-all duration-300">
+                  <span className="mr-2">👗</span>
+                  Fashion
+                </a>
+                <a href="#" className="flex items-center py-3 px-4 text-gray-700 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 rounded-xl transition-all duration-300">
+                  <span className="mr-2">🏠</span>
+                  Home
+                </a>
+                <a href="#" className="flex items-center py-3 px-4 text-gray-700 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 rounded-xl transition-all duration-300">
+                  <span className="mr-2">💄</span>
+                  Beauty
+                </a>
               </div>
             </div>
-            <Link href="/deals" className="py-2 px-4 text-red-600 hover:bg-red-50 rounded-lg font-medium">
-              Deals
-            </Link>
-            <Link href="/new-arrivals" className="py-2 px-4 text-gray-700 hover:bg-indigo-50 rounded-lg">
+            
+            <a href="#" className="flex items-center py-3 px-4 text-red-600 hover:bg-red-50 rounded-xl font-semibold transition-all duration-300">
+              <Gift size={18} className="mr-3" />
+              Hot Deals
+            </a>
+            <a href="#" className="py-3 px-4 text-gray-700 hover:bg-indigo-50 rounded-xl font-medium transition-all duration-300">
               New Arrivals
-            </Link>
-            <Link href="/brands" className="py-2 px-4 text-gray-700 hover:bg-indigo-50 rounded-lg">
+            </a>
+            <a href="#" className="py-3 px-4 text-gray-700 hover:bg-indigo-50 rounded-xl font-medium transition-all duration-300">
               Brands
-            </Link>
-            <div className="pt-4 border-t">
-              <Link href="/account" className="flex items-center py-2 text-gray-700">
-                <User size={18} className="mr-2" />
+            </a>
+            
+            <div className="pt-6 border-t border-gray-100 mt-4 space-y-2">
+              <a href="#" className="flex items-center py-3 px-4 text-gray-700 hover:bg-indigo-50 rounded-xl transition-all duration-300">
+                <User size={18} className="mr-3 text-indigo-600" />
                 My Account
-              </Link>
-              <Link href="/wishlist" className="flex items-center py-2 text-gray-700">
-                <Heart size={18} className="mr-2" />
+              </a>
+              <a href="#" className="flex items-center py-3 px-4 text-gray-700 hover:bg-red-50 rounded-xl transition-all duration-300">
+                <Heart size={18} className="mr-3 text-red-600" />
                 Wishlist
-              </Link>
-              <Link href="/cart" className="flex items-center py-2 text-gray-700">
-                <ShoppingCart size={18} className="mr-2" />
+              </a>
+              <a href="#" className="flex items-center py-3 px-4 text-gray-700 hover:bg-indigo-50 rounded-xl transition-all duration-300">
+                <ShoppingCart size={18} className="mr-3 text-indigo-600" />
                 Shopping Cart
-              </Link>
+              </a>
             </div>
           </div>
         </div>
       </header>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .animate-fadeIn {
+          animation: fadeIn 0.3s ease-out;
+        }
+      `}</style>
     </>
   );
 };
