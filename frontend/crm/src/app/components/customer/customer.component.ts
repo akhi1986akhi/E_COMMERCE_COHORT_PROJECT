@@ -9,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 export class CustomerComponent implements OnInit {
 
   totalDocs!:Number;
-
+  customers!:any[];
   constructor(private _user: UserService,) { }
   ngOnInit(): void {
 
@@ -24,6 +24,7 @@ export class CustomerComponent implements OnInit {
       next: (resp) => {
         console.log(resp)
         this.totalDocs=resp.totalDocs;
+        this.customers=resp.docs;
       },
       error: (err) => {
         console.log(err)

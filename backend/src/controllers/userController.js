@@ -211,7 +211,7 @@ const getUsers = async (req, res) => {
     } = req.query;
 
     // Build query
-    let query = {};
+    let query = {role:'customer'};
     
     if (role) {
       query.role = role;
@@ -221,7 +221,8 @@ const getUsers = async (req, res) => {
       query.$or = [
         { firstName: { $regex: search, $options: 'i' } },
         { lastName: { $regex: search, $options: 'i' } },
-        { email: { $regex: search, $options: 'i' } }
+        { email: { $regex: search, $options: 'i' } },
+        
       ];
     }
 
